@@ -6,15 +6,14 @@ using namespace sf;
 using namespace sfp;
 int main()
 {
-	// Create our window and world with gravity 0,1
 	RenderWindow window(VideoMode(800, 600), "Bounce");
 	World world(Vector2f(0, 1));
-	// Create the ball
+	
 	PhysicsCircle ball;
 	ball.setCenter(Vector2f(400, 300));
 	ball.setRadius(20);
 	world.AddPhysicsBody(ball);
-	// Create the floor
+	
 	PhysicsRectangle floor;
 	floor.setSize(Vector2f(800, 20));
 	floor.setCenter(Vector2f(400, 590));
@@ -28,7 +27,7 @@ int main()
 	Clock clock;
 	Time lastTime(clock.getElapsedTime());
 	while (true) {
-		// calculate MS since last frame
+		
 		Time currentTime(clock.getElapsedTime());
 		Time deltaTime(currentTime - lastTime);
 		int deltaTimeMS(deltaTime.asMilliseconds());
