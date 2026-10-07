@@ -18,7 +18,7 @@ int main()
 	PhysicsRectangle floor;
 	floor.setSize(Vector2f(800, 20));
 	floor.setCenter(Vector2f(400, 590));
-	floor.setStatic(true);
+	floor.setStatic(true); 
 	world.AddPhysicsBody(floor);
 	int thudCount(0);
 	floor.onCollision = [&thudCount](PhysicsBodyCollisionResult result) {
